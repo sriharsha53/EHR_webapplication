@@ -1,0 +1,89 @@
+
+
+#imaginary_container{
+    margin-top:60%; /* Don't copy this */
+}
+#imaginary_container1{
+    margin-top:20%; /* Don't copy this */
+}
+.stylish-input-group .input-group-addon{
+    background: black !important; 
+    border-color:black;
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:black;
+        opacity:0.8;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+.left_pane{
+padding:10px;
+width:40%;
+height:100%;
+position:fixed;
+border-color:#ccffcc;
+float:left;}
+.left_pane1{
+
+padding:10px;
+width:40%;
+height:100%;
+border-color:#ccffcc;
+float:left;}
+
+.pad{
+margin-left:10px;
+}
+.pad1{
+margin-top:100px;
+}
+
+.right_pane{
+width:50%;
+height:100%;
+float:right;}
+
+div.left_pane,div.right_pane{display:inline;}
+
+body{
+
+ /* background-image: url("../images/dugpage.jpg") !important;
+
+  background:transparent;*/
+}
+
+img{
+
+  content: "";
+  background: url(../images/dugpage.jpg);
+  
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; 
+background-repeat: repeat-y;
+height:auto;
+}
+#bg{
+opacity:0.7;}
+.result{
+color:black;
+text-align:justify;
+font-weight: bold;
+text-shadow: 0px 0px black;}
+#head{
+color:BLACK;
+margin-left:50px;
+text-align:justify;
+font-weight: bold;
+
+text-shadow: 2px 0.5px WHITE;}
+#collapse1{
+text-align:justify;
+}

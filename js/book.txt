@@ -1,0 +1,24 @@
+function populate(s1,s2){
+var s1 = document.getElementById(s1);
+var s2 = document.getElementById(s2);
+s2.innerHTML="";
+
+if(s1.value == "Pediatrics"){
+var optionArray=["|","dr.John|Dr.John","dr.Philip"|Dr.Philip","dr.Thompson|Dr.Thompson"];
+}
+if(s1.value == "Dermatology"){
+var optionArray=["|","dr.Tom|Dr.Tom","dr.Davis"|Dr.Davis","dr.Phil|Dr.Phil","dr.Raj|Dr.Raj"];
+}
+if(s1.value == "Cardiology"){
+var optionArray=["|","dr.Karen|Dr.Karen","dr.Thomas"|Dr.Thomas"];
+}
+
+
+for(var option in optionArray){
+var pair=optionArray[option].split("|");
+var newOption = document.createElement("option");
+newOPtion.value=pair[0];
+newOption.innerHTML = pair[1];
+s2.options.add(newOption);
+}
+}

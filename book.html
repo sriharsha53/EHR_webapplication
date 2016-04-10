@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>EHR</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script  src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/book.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Electronic Health Records</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li ><a href="index.html">Home</a></li>
+                <li><a href="healthrec.html">My Health Record</a></li>
+                <li class="active"><a href="#book">Book appointment</a></li>
+                <li><a href="findrug.html">Find Drugs</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+          <img src="images/Calendar.jpg" id="bg" class="back" alt="drugpage">
+        <div class="left_pane">
+          <h2 class="pad"> <b><font color="black";>Book your Appointment here</font></b></h2>
+          <hr style="border: 2px dotted " color="black" size="2">
+          <h3><font color="black";><b>Select Department</b></font></h3>
+          <select id="dept" class="form-control" value="dept" style="border-color:black;" onchange="populate(this.id,'doc')">
+            <option value=""></option>
+            <option value="Pediatrics">Pediatrics</option>
+            <option value="Dermatology">Dermatology</option>
+            <option value="Cardiology">Cardiology</option>
+          </select>
+          <h3 class="pad"><font color="black";><b>Select Doctor</b></font></h3>
+          <select id="doc" style="border-color:black;" class="form-control" value="doc" onchange="populate2(this.id,'day')"></select>
+          <h3 class="pad"><font color="black";><b> Available days for the doctor</b></font></h3>
+          <select id="day" style="border-color:black;" class="form-control" value="day" onchange="populate3('doc','time')"></select>
+          <H3 class="pad"><font color="black";><b>Select Time</b></font></H3>
+          <select id="time" style="border-color:black;" class="form-control" value="time"></select>
+          </br>
+        </br></br>
+        
+          <button onclick=window.location="table.html" style="float:right;" type="button" style="border-color:black;border-style:solid;" class="btn btn-success">Book</button>
+          <button onclick=window.location="table.html" style="float:right;" type="button" style="border-color:black;border-style:solid;" class="btn btn-primary">View my Appointments</button>
+        </br></br>
+      </div>
+
+          <div>
+             <div class='right_pane1'>
+              <h2 style="margin-top:4%; "><b><font color="black";>Find your doctor</font></b></h2>
+              <hr style="border: 2px dotted " color="black" size="2">
+              <div class="panel panel-info" style="border-color:black;">
+                <div class="panel-heading" style="border-color:black;">
+                  <h3 class="panel-title"><b>Dr.John</b></h3>
+                </div>
+                  <div class="panel-body">
+
+                    <p><font color="black";>
+                      <b>Department:</b> Pediatrics</br>
+                      <b>Available days:</b> M W F<br/>
+                      <b>Available timings:</b> 5-8 p.m.</br>
+                      <b>Rating:</b>8/10</br></font>
+                    </p>
+
+                  </div>
+              </div>
+              <div class="panel panel-info" style="border-color:black;">
+                <div class="panel-heading" style="border-color:black;">
+                  <h3 class="panel-title"><b>Dr.Philip</b></h3>
+                </div>
+                  <div class="panel-body">
+
+                    <p><font color="black";>
+                      <b>Department:</b> Pediatrics</br>
+                      <b>Available days:</b> W Th F<br/>
+                      <b>Available timings:</b> 5-7 p.m.</br>
+                      <b>Rating:</b>8.5/10</br></font>
+                    </p>
+
+                  </div>
+              </div><div class="panel panel-info" style="border-color:black;">
+                <div class="panel-heading" style="border-color:black;">
+                  <h3 class="panel-title"><b>Dr.Thompson</b></h3>
+                </div>
+                  <div class="panel-body">
+
+                    <p><font color="black";>
+                      <b>Department:</b> Pediatrics</br>
+                      <b>Available days:</b> Su<br/>
+                      <b>Available timings:</b> 10a.m.- 12p.m.</br>
+                      <b>Rating:</b>9.5/10</br></font>
+                    </p>
+
+                  </div>
+              </div><div class="panel panel-info" style="border-color:black;">
+                <div class="panel-heading" style="border-color:black;">
+                  <h3 class="panel-title"><b>Dr.Tom</b></h3>
+                </div>
+                  <div class="panel-body">
+
+                    <p><font color="black";>
+                      <b>Department:</b> Dermatology</br>
+                      <b>Available days:</b> M T W<br/>
+                      <b>Available timings:</b> 2-3:30 p.m.</br>
+                      <b>Rating:</b>9/10</br></font>
+                    </p>
+
+                  </div>
+              </div><div class="panel panel-info" style="border-color:black;">
+                <div class="panel-heading" style="border-color:black;">
+                  <h3 class="panel-title"><b>Dr.Davis</b></h3>
+                </div>
+                  <div class="panel-body">
+
+                    <p><font color="black";>
+                      <b>Department:</b> Dermatology</br>
+                      <b>Available days:</b> T W Th F<br/>
+                      <b>Available timings:</b> 5-8 p.m.</br>
+                      <b>Rating:</b>7.5/10</br></font>
+                    </p>
+
+                  </div>
+              </div><div class="panel panel-info">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><b>Dr.Phil</b></h3>
+                </div>
+                  <div class="panel-body">
+
+                    <p><font color="black";>
+                      <b>Department:</b> Dermatology</br>
+                      <b>Available days:</b> S Su <br/>
+                      <b>Available timings:</b> 10 a.m.-12:30 p.m.</br>
+                      <b>Rating:</b>8.5/10</br></font>
+                    </p>
+
+                  </div>
+              </div><div class="panel panel-info" style="border-color:black;">
+                <div class="panel-heading" style="border-color:black;">
+                  <h3 class="panel-title"><b>Dr.Raj</b></h3>
+                </div>
+                  <div class="panel-body">
+
+                    <p><font color="black";>
+                      <b>Department:</b> Dermatology</br>
+                      <b>Available days:</b> W <br/>
+                      <b>Available timings:</b> 6-7 p.m.</br>
+                      <b>Rating:</b>7.5/10</br></font>
+                    </p>
+
+                  </div>
+              </div><div class="panel panel-info" style="border-color:black;">
+                <div class="panel-heading" style="border-color:black;">
+                  <h3 class="panel-title"><b>Dr.Karen</b></h3>
+                </div>
+                  <div class="panel-body">
+
+                    <p><font color="black";>
+                      <b>Department:</b> Cardiology</br>
+                      <b>Available days:</b> W Th<br/>
+                      <b>Available timings:</b> 10-11 a.m.</br>
+                      <b>Rating:</b>8/10</br></font>
+                    </p>
+
+                  </div>
+              </div>
+              <div class="panel panel-info" style="border-color:black;">
+                <div class="panel-heading" style="border-color:black;">
+                  <h3 class="panel-title"><b>Dr.Thomas</b></h3>
+                </div>
+                  <div class="panel-body">
+
+                    <p><font color="black";>
+                      <b>Department:</b> Cardiology</br>
+                      <b>Available days:</b> Th F<br/>
+                      <b>Available timings:</b> 2-4 p.m.</br>
+                      <b>Rating:</b>7.5/10</br></font>
+                    </p>
+
+                  </div>
+              </div>
+
+
+            </div>
+</div>
+
+
+
+</body>
+</html>
